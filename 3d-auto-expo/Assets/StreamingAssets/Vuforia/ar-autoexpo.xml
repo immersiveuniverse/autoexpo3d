@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="tata-motors" size="1.000000 0.740000" />
+    <ImageTarget name="auto-expo" size="1.000000 0.607639" />
+  </Tracking>
+</QCARConfig>
