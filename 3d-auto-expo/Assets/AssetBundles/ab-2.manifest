@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 1241449611
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 70169f68bde99a61595a4b049e8816eb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3b5270efd14c553f9368f826a869d8bc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Editor/Res/Models/car-2/Cars/16_Classic/Classic_16.FBX
+Dependencies: []
