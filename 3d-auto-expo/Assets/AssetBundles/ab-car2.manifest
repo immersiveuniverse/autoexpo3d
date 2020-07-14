@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 885508604
+CRC: 1512142511
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 70169f68bde99a61595a4b049e8816eb
+    Hash: e352a277269d30ff3be138883dc29834
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3b5270efd14c553f9368f826a869d8bc
+    Hash: b5b5dd573bc3d99d29a77d178c6b1f39
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,12 +25,12 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 74
-  Script: {instanceID: 0}
-- Class: 90
-  Script: {instanceID: 0}
-- Class: 95
+- Class: 114
+  Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7c73c1ab94e28d244827af556dca1ed2, type: 3}
+- Class: 115
   Script: {instanceID: 0}
 Assets:
-- Assets/Editor/Res/Models/car-2/Cars/16_Classic/Classic_16.FBX
+- Assets/Src/Prefabs/showcars/car2.prefab
 Dependencies: []

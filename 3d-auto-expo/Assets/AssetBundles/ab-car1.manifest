@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3194147534
+CRC: 2745767243
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b537c18a8258dac036a87e3b2066dd93
+    Hash: 04d52c9b8757bee58269a555970ce823
   TypeTreeHash:
     serializedVersion: 2
-    Hash: dc58c56b3ac91dfb9e775ce4912d68d0
+    Hash: b5b5dd573bc3d99d29a77d178c6b1f39
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,18 +17,20 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 23
   Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 74
-  Script: {instanceID: 0}
-- Class: 90
-  Script: {instanceID: 0}
-- Class: 95
+- Class: 114
+  Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7c73c1ab94e28d244827af556dca1ed2, type: 3}
+- Class: 115
   Script: {instanceID: 0}
 Assets:
-- Assets/Editor/Res/Models/car-1/Tocus/Tocus.FBX
+- Assets/Src/Prefabs/showcars/car1.prefab
 Dependencies: []
