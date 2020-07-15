@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlusMinusMenu : MonoBehaviour
 {
-    private bool boolFeatureMenu, boolFooterMenu = false;
-    public Animator FeatureMenu, FooterMenu;
-    public Button BtnFeatureMenu, BtnFooterMenu;
+    private bool boolFeatureMenu, boolCompMenu = false;
+    public Animator FeatureMenu, CompMenu;
+    public Button BtnFeatureMenu, BtnCompMenu;
     public Sprite add, sub;
 
     public void AnimFeatureMenu()
@@ -25,21 +25,21 @@ public class PlusMinusMenu : MonoBehaviour
             BtnFeatureMenu.GetComponent<Image>().sprite = sub;
         }
     }
-    /*
-    public void AnimFooterMenu()
+    
+    public void AnimCompMenu()
     {
-        if (!boolFooterMenu)
+        if (!boolCompMenu)
         {
-            boolFooterMenu = true;
-            FooterMenu.SetBool("BoolFooterMenu", boolFooterMenu);
-            BtnFooterMenu.GetComponent<Image>().sprite = add;
+            boolCompMenu = true;
+            CompMenu.SetBool("boolCompMenu", boolCompMenu);
+            BtnCompMenu.GetComponent<Image>().sprite = add;
         }
         else
         {
-            boolFooterMenu = false;
-            FooterMenu.SetBool("BoolFooterMenu", boolFooterMenu);
-            BtnFooterMenu.GetComponent<Image>().sprite = sub;
+            boolCompMenu = false;
+            CompMenu.SetBool("boolCompMenu", boolCompMenu);
+            BtnCompMenu.GetComponent<Image>().sprite = sub;
         }
     }
-    */
+    
 }
