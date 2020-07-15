@@ -1637,6 +1637,26 @@ PrefabInstance:
       propertyPath: transmission
       value: 
       objectReference: {fileID: 1996191399}
+    - target: {fileID: 3443795333043451978, guid: 634d8620f3167874d878b54b6b4eed21,
+        type: 3}
+      propertyPath: Space
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443795333342011272, guid: 634d8620f3167874d878b54b6b4eed21,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443795334543017610, guid: 634d8620f3167874d878b54b6b4eed21,
+        type: 3}
+      propertyPath: Space
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442718563170755050, guid: 634d8620f3167874d878b54b6b4eed21,
+        type: 3}
+      propertyPath: Space
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 634d8620f3167874d878b54b6b4eed21, type: 3}
 --- !u!1001 &6388020831325664491
@@ -1890,6 +1910,11 @@ PrefabInstance:
       propertyPath: BtnCompMenu
       value: 
       objectReference: {fileID: 1502666775}
+    - target: {fileID: 7193537959258352528, guid: 31d6ed874383ed245bd8dbf26b217656,
+        type: 3}
+      propertyPath: CarAnimator
+      value: 
+      objectReference: {fileID: 332163015}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d6ed874383ed245bd8dbf26b217656, type: 3}
 --- !u!1001 &7874640311056287476
