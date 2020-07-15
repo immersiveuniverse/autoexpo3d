@@ -1042,6 +1042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: car3
       objectReference: {fileID: 0}
+    - target: {fileID: 6548337560399283738, guid: 7184be9f00c73404ea4ff2215a9462cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6551309486847611852, guid: 7184be9f00c73404ea4ff2215a9462cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1225,6 +1230,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446719596}
   m_CullTransparentMesh: 0
+--- !u!1 &1506205074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506205075}
+  - component: {fileID: 1506205076}
+  m_Layer: 0
+  m_Name: AssetLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506205075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506205074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506205076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506205074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee16b1386d41fa419fc3ff8ee431cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: https://drive.google.com/uc?export=download&id=1XR_QsN_Unz3c7_Q_KgD62gAeal2B8Gk1
+  carName: car1
 --- !u!1 &1513709521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: car1
       objectReference: {fileID: 0}
+    - target: {fileID: 4833045581213312702, guid: d22746fb0d0ab0643989107fefaa360b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4835058402709666932, guid: d22746fb0d0ab0643989107fefaa360b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1626,6 +1681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: car2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809259211675746643, guid: fd05a4bf871fbbc48aaceabf5981de14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7815199254124432579, guid: fd05a4bf871fbbc48aaceabf5981de14,
         type: 3}

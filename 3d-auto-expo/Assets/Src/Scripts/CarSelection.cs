@@ -7,12 +7,14 @@ public class CarSelection : MonoBehaviour
 {
     public GameObject[] cars;
     public Button[] btnCars;
-    public GameObject featuresMenu;
+    public GameObject featuresMenu, compMenu;
     public Text price, mileage, engine, transmission;
 
     private int i;
     public void SelectCar(int index) {
         featuresMenu.SetActive(true);
+        compMenu.SetActive(true);
+
         if (index == 1) {
             i = 1;
             SelectCarFirst();

@@ -1,27 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
+using UnityEngine.Networking;
+using System.Collections;
 using System.IO;
 
 public class AssetLoader : MonoBehaviour
 {
+    AssetBundle myAssetBundle;
 
-    public string bundleURL = "https://drive.google.com/drive/folders/1CnOx1IY8EtwzoA2ODr4VvhwqMC1SzRw7?usp=sharing";
-    public string assetName = "ab-car1";
+    public string path;
+    public string carName;
 
-    IEnumerator Start()
+    void Start()
     {
-        using (WWW web = new WWW(bundleURL)) {
-            yield return web;
+        LoadAssetBundle(path);
+        InstantiateAsset(carName);
+    }
 
-            AssetBundle remoteAssetBundle = web.assetBundle;
-            if (remoteAssetBundle == null) {
-                Debug.LogError("Adso failed to download Asset Bundle");
-            }
-            Instantiate(remoteAssetBundle.LoadAsset(assetName));
-            //remoteAssetBundle.Unload(false);
-        }
-        
+    void LoadAssetBundle(string bundleURL) {
+        //myAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundleURL));
+        myAssetBundle = AssetBundle.LoadFromFile(bundleURL);
+        Debug.Log(myAssetBundle == null? "Failed":"Success");
+    }
+
+    void InstantiateAsset(string assetName) {
+        var prefab = myAssetBundle.LoadAsset(assetName);
+        Instantiate(prefab);
     }
 }
+

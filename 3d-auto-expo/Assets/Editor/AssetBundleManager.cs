@@ -14,6 +14,6 @@ public class AssetBundleManager : MonoBehaviour
             Directory.CreateDirectory(abDir);
         }
 
-        BuildPipeline.BuildAssetBundles(abDir, BuildAssetBundleOptions.None, EditorUserBuildSettings.activeBuildTarget);
+        BuildPipeline.BuildAssetBundles(abDir, BuildAssetBundleOptions.ChunkBasedCompression, EditorUserBuildSettings.activeBuildTarget);
     }
 }
