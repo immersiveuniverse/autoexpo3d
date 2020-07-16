@@ -1,13 +1,10 @@
 ManifestFileVersion: 0
-CRC: 677430626
+CRC: 3191450734
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: ab-car3
+      Name: cube
       Dependencies: {}
     Info_1:
-      Name: ab-car2
-      Dependencies: {}
-    Info_2:
-      Name: ab-car1
+      Name: cars
       Dependencies: {}

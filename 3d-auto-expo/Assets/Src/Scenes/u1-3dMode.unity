@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee16b1386d41fa419fc3ff8ee431cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: https://drive.google.com/uc?export=download&id=1XR_QsN_Unz3c7_Q_KgD62gAeal2B8Gk1
+  path: https://23d89949-5368-439f-be19-2ba0010c3e97.filesusr.com/archives/99ec8a_d3d3cd0f541d46fd8f750b32ba0d1544.zip?dn=cars.zip
   carName: car1
 --- !u!1 &1513709521
 GameObject:

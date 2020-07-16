@@ -6,6 +6,8 @@ using System.IO;
 public class AssetLoader : MonoBehaviour
 {
     AssetBundle myAssetBundle;
+    AssetBundleCreateRequest myRequest;
+
 
     public string path;
     public string carName;
@@ -17,13 +19,17 @@ public class AssetLoader : MonoBehaviour
     }
 
     void LoadAssetBundle(string bundleURL) {
-        //myAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundleURL));
-        myAssetBundle = AssetBundle.LoadFromFile(bundleURL);
-        Debug.Log(myAssetBundle == null? "Failed":"Success");
+        //myRequest = AssetBundle.LoadFromFileAsync(Path.Combine(Application.streamingAssetsPath, bundleURL));
+        myRequest = AssetBundle.LoadFromFileAsync(bundleURL);
+        myAssetBundle = myRequest.assetBundle;
+
+        //Debug.Log(myAssetBundle == null? "Failed":"Success");
+        Debug.Log(bundleURL);
     }
 
     void InstantiateAsset(string assetName) {
-        var prefab = myAssetBundle.LoadAsset(assetName);
+        var assetRequest = myAssetBundle.LoadAssetAsync(assetName);
+        var prefab = assetRequest.asset;
         Instantiate(prefab);
     }
 }
