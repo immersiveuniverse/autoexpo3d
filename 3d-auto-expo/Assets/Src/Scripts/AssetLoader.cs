@@ -6,8 +6,6 @@ using System.IO;
 public class AssetLoader : MonoBehaviour
 {
     AssetBundle myAssetBundle;
-    AssetBundleCreateRequest myRequest;
-
 
     public string path;
     public string carName;
@@ -19,18 +17,14 @@ public class AssetLoader : MonoBehaviour
     }
 
     void LoadAssetBundle(string bundleURL) {
-        //myRequest = AssetBundle.LoadFromFileAsync(Path.Combine(Application.streamingAssetsPath, bundleURL));
-        myRequest = AssetBundle.LoadFromFileAsync(bundleURL);
-        myAssetBundle = myRequest.assetBundle;
-
-        //Debug.Log(myAssetBundle == null? "Failed":"Success");
-        Debug.Log(bundleURL);
+        //myAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundleURL));
+        myAssetBundle = AssetBundle.LoadFromFile(bundleURL);
+        Debug.Log(myAssetBundle == null? "Failed":"Success");
     }
 
     void InstantiateAsset(string assetName) {
-        var assetRequest = myAssetBundle.LoadAssetAsync(assetName);
-        var prefab = assetRequest.asset;
-        Instantiate(prefab);
+        GameObject prefab = myAssetBundle.LoadAsset<GameObject>(assetName);
+        Instantiate(prefab, new Vector3(0f, -27f, 50f), Quaternion.Euler(0f, 90f, 0f));
     }
 }
 

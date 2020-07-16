@@ -8,9 +8,10 @@ public class CarAnimHandler : MonoBehaviour
     public Animator CarAnimator;
     public Button btnTyre, btnSeats, btnTop;
     private bool boolTyre, boolSeats, boolTop = false;
-
+    
     public void AnimTyre()
     {
+        CarAnimator.enabled = true; 
         if (!boolTyre)
         {
             boolTyre = true;
@@ -36,6 +37,7 @@ public class CarAnimHandler : MonoBehaviour
 
     public void AnimSeats()
     {
+        CarAnimator.enabled = true;
         if (!boolSeats)
         {
             boolSeats = true;
@@ -61,6 +63,7 @@ public class CarAnimHandler : MonoBehaviour
 
     public void AnimTop()
     {
+        CarAnimator.enabled = true;
         if (!boolTop)
         {
             boolTop = true;

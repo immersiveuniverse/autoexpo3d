@@ -8,7 +8,7 @@ public class ColorVariant : MonoBehaviour
     public GameObject[] cars;
     public Button[] colors;
     public Material m1, m2, m3;
-
+    public Material[] m;
     private int i;
     public void SelectColor(int index) {
         if (index == 0)
@@ -30,25 +30,16 @@ public class ColorVariant : MonoBehaviour
     }
 
     void FirstColor() {
-        cars[0].GetComponent<Renderer>().material = m1;
-        Debug.Log(cars[0].GetComponent<Renderer>().material);
-        Debug.Log(cars[0].GetComponent<Renderer>().materials);
-        Debug.Log(cars[0].GetComponent<Renderer>().materials[0]);
+        cars[1].GetComponent<Renderer>().material = m[1];
     }
 
     void SecondColor()
     {
-        cars[0].GetComponent<Renderer>().material = m2;
-        Debug.Log(cars[0].GetComponent<Renderer>().material);
-        Debug.Log(cars[0].GetComponent<Renderer>().materials);
-        Debug.Log(cars[0].GetComponent<Renderer>().materials[0]);
+        cars[1].GetComponent<Renderer>().material = m[1];
     }
 
     void ThirdColor()
     {
-        cars[0].GetComponent<Renderer>().material = m3;
-        Debug.Log(cars[0].GetComponent<Renderer>().material);
-        Debug.Log(cars[0].GetComponent<Renderer>().materials);
-        Debug.Log(cars[0].GetComponent<Renderer>().materials[0]);
+        cars[1].GetComponent<Renderer>().material = m[1];
     }
 }

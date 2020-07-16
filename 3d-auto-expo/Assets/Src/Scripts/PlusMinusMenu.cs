@@ -10,6 +10,13 @@ public class PlusMinusMenu : MonoBehaviour
     public Button BtnFeatureMenu, BtnCompMenu;
     public Sprite add, sub;
 
+    private void Update()
+    {
+        if (boolCompMenu && boolFeatureMenu) {
+            CarAnimator.enabled = false;
+        }
+    }
+
     public void AnimFeatureMenu()
     {
         if (!boolFeatureMenu)
@@ -17,14 +24,13 @@ public class PlusMinusMenu : MonoBehaviour
             boolFeatureMenu = true;
             FeatureMenu.SetBool("boolCloseOpen", boolFeatureMenu);
             BtnFeatureMenu.GetComponent<Image>().sprite = add;
-            CarAnimator.enabled = false;
+            
         }
         else
         {
             boolFeatureMenu = false;
             FeatureMenu.SetBool("boolCloseOpen", boolFeatureMenu);
             BtnFeatureMenu.GetComponent<Image>().sprite = sub;
-            CarAnimator.enabled = true;
         }
     }
     
