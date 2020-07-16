@@ -425,7 +425,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433394660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 47a8df7dd48cd3343b665cd84d93ad72, type: 2}
   m_CullingMode: 0
@@ -2970,6 +2970,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4875954174407402286, guid: 634d8620f3167874d878b54b6b4eed21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3443795333974945989, guid: 634d8620f3167874d878b54b6b4eed21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3109,11 +3114,6 @@ PrefabInstance:
         type: 3}
       propertyPath: Space
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4875954174407402286, guid: 634d8620f3167874d878b54b6b4eed21,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8442718563170755051, guid: 634d8620f3167874d878b54b6b4eed21,
         type: 3}
@@ -3529,7 +3529,7 @@ PrefabInstance:
     - target: {fileID: 7193537959258352530, guid: 31d6ed874383ed245bd8dbf26b217656,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 280
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7193537959258352530, guid: 31d6ed874383ed245bd8dbf26b217656,
         type: 3}
