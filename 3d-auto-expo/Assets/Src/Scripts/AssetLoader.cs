@@ -10,21 +10,23 @@ public class AssetLoader : MonoBehaviour
     public string path;
     public string carName;
 
-    void Start()
+    IEnumerator Start()
     {
-        LoadAssetBundle(path);
-        InstantiateAsset(carName);
-    }
+        using (WWW web = new WWW(path))
+        {
+            yield return web;
+            AssetBundle remoteAsset = web.assetBundle;
+            
+            if (remoteAsset == null)
+            {
+                Debug.Log("Failed");
+                yield break;
+            }
 
-    void LoadAssetBundle(string bundleURL) {
-        //myAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundleURL));
-        myAssetBundle = AssetBundle.LoadFromFile(bundleURL);
-        Debug.Log(myAssetBundle == null? "Failed":"Success");
-    }
+            Instantiate(remoteAsset.LoadAsset(carName));
+            remoteAsset.Unload(false);
 
-    void InstantiateAsset(string assetName) {
-        GameObject prefab = myAssetBundle.LoadAsset<GameObject>(assetName);
-        Instantiate(prefab, new Vector3(0f, -27f, 50f), Quaternion.Euler(0f, 90f, 0f));
+        }
     }
 }
 

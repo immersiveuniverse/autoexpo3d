@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Src/Scenes/1-3dModeDone.unity
     guid: 44041ece9f3ed3340968833f016660eb
   - enabled: 1
-    path: Assets/Src/Scenes/2-ArMode.unity
+    path: Assets/Src/Scenes/2-ArModeDone.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
