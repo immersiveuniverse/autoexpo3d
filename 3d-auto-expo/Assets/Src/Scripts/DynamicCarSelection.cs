@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class DynamicCarSelection : MonoBehaviour
 {
-    public GameObject[] cars;
     public Button[] btnCars;
     public GameObject featuresMenu, compMenu;
     public Text price, mileage, engine, transmission;
-    public GameObject IndicaComp;
+    public GameObject IndicaComp, CarsContainer;
+    //public GameObject checkCarStatus;
 
     AssetBundle myAssetBundle;
 
     public string path;
-    public string carName;
+    //public string carName;
 
     private int i;
     public void SelectCar(int index)
@@ -39,7 +39,9 @@ public class DynamicCarSelection : MonoBehaviour
         }
     }
 
-    IEnumerator StartCarLoading(string carAssetName) {
+    private bool car0, car1, car2, boolcarA, boolcarB, boolcarC = false;
+    public GameObject carA, carB, carC;
+    IEnumerator StartCarLoading(string carAssetName, int index) {
         using (WWW web = new WWW(path))
         {
             yield return web;
@@ -51,45 +53,129 @@ public class DynamicCarSelection : MonoBehaviour
                 yield break;
             }
 
-            Instantiate(remoteAsset.LoadAsset(carName));
-            remoteAsset.Unload(false);
+            GameObject myCar = remoteAsset.LoadAsset(carAssetName) as GameObject;
 
+            if (!car0 && !car1 && !car2)
+            {
+                Debug.Log("All");
+                if (myCar.name.Equals("car1") && carAssetName.Equals("car1"))
+                {
+                    carA = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                    car0 = true;
+                }
+                else if (myCar.name.Equals("car2") && carAssetName.Equals("car2"))
+                {
+                    carB = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                    car1 = true;
+                }
+                else if (myCar.name.Equals("car3") && carAssetName.Equals("car3"))
+                {
+                    carC = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                    car2 = true;
+                }
+            }
+            else {
+                if (car0 && !boolcarA)
+                {
+                    Debug.Log("car0");
+                    carA.SetActive(false);
+                    if (myCar.name.Equals("car2") && carAssetName.Equals("car2"))
+                    {
+                        carB = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                        car1 = true;
+                    }
+                    else if (myCar.name.Equals("car3") && carAssetName.Equals("car3"))
+                    {
+                        carC = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                        car2 = true;
+                    }
+                    boolcarA = true;
+                }else if (car1 && !boolcarB)
+                {
+                    Debug.Log("car1");
+                    carB.SetActive(false);
+                    if (myCar.name.Equals("car1") && carAssetName.Equals("car1"))
+                    {
+                        carA = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                        car0 = true;
+                    }
+                    else if (myCar.name.Equals("car3") && carAssetName.Equals("car3"))
+                    {
+                        carC = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                        car2 = true;
+                    }
+                    boolcarB = true;
+                }
+                else if (car2 && !boolcarC)
+                {
+                    Debug.Log("car2");
+                    carC.SetActive(false);
+                    if (myCar.name.Equals("car1") && carAssetName.Equals("car1"))
+                    {
+                        carA = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                        car0 = true;
+                    }
+                    else if (myCar.name.Equals("car2") && carAssetName.Equals("car2"))
+                    {
+                        carB = Instantiate(myCar, CarsContainer.transform) as GameObject;
+                        car1 = true;
+                    }
+                    boolcarC = true;
+                }
+            }
+
+            
+
+            
+            remoteAsset.Unload(false);
         }
     }
 
     void SelectCarNaught()
     {
         CarNaughtCanvas();
-        StartCoroutine(StartCarLoading("car1"));
 
-        //cars[i].SetActive(true);
-        //cars[1].SetActive(false);        
-        //cars[2].SetActive(false);             
+        if (!car0) {
+            StartCoroutine(StartCarLoading("car1", 0));
+        }
+        else {
+            carA.SetActive(true);
+            carB.SetActive(false);
+            carC.SetActive(false);
+
+        }
     }
-
-    
 
     void SelectCarFirst()
     {
         CarFirstCanvas();
 
-        cars[i].SetActive(true);
-        cars[0].SetActive(false);        
-        cars[2].SetActive(false);
-        
+        if (!car1)
+        {
+            StartCoroutine(StartCarLoading("car2", 1));
+        }
+        else
+        {
+            carA.SetActive(false);
+            carB.SetActive(true);
+            carC.SetActive(false);
+        }
     }
-
-    
 
     void SelectCarSecond()
     {
         CarSecondCanvas();
 
-        cars[i].SetActive(true);        
-        cars[0].SetActive(false);        
-        cars[1].SetActive(false);        
-
-        
+        if (!car2)
+        {
+            StartCoroutine(StartCarLoading("car3", 2));
+        }
+        else
+        {
+            carA.SetActive(false);
+            carB.SetActive(false);
+            carC.SetActive(true);
+        }
     }
 
     void CarNaughtCanvas()

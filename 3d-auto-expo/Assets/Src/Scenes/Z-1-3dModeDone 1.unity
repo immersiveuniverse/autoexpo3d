@@ -161,7 +161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &132678022
 Transform:
   m_ObjectHideFlags: 0
@@ -1125,6 +1125,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &938976698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3443795333974945990, guid: 634d8620f3167874d878b54b6b4eed21,
+    type: 3}
+  m_PrefabInstance: {fileID: 3443795333043451983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &938976699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938976698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1084ef2cf481fc4a8a3e11a76e9bc83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnCars:
+  - {fileID: 1513709523}
+  - {fileID: 1446719598}
+  - {fileID: 1150099548}
+  featuresMenu: {fileID: 1797185088}
+  compMenu: {fileID: 664666719}
+  price: {fileID: 1904306523}
+  mileage: {fileID: 846756922}
+  engine: {fileID: 1179074543}
+  transmission: {fileID: 1996191399}
+  IndicaComp: {fileID: 664666719}
+  CarsContainer: {fileID: 938976698}
+  path: https://github.com/immersiveuniverse/autoexpo3d/raw/master/3d-auto-expo/Assets/AssetBundles/cars
 --- !u!1 &948181876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8442168012963359785, guid: 634d8620f3167874d878b54b6b4eed21,
@@ -1156,18 +1187,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3443795333043451983}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &965380235 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3443795333974945988, guid: 634d8620f3167874d878b54b6b4eed21,
-    type: 3}
-  m_PrefabInstance: {fileID: 3443795333043451983}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caa835be439415d448caf3d8e61e7b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &976121652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 215488361013050008, guid: 94adef2ecdd234747a093d5f8f8a4e79,
@@ -3140,7 +3159,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e944d2b16e92a4e408d1d10aca9993ad, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3443795333974945988, guid: 634d8620f3167874d878b54b6b4eed21, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 634d8620f3167874d878b54b6b4eed21, type: 3}
 --- !u!1 &3443795333043451984 stripped
 GameObject:
@@ -3942,17 +3962,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 965380235}
+      objectReference: {fileID: 938976699}
+    - target: {fileID: 8233868382326380173, guid: eee46f99cedecd4449813b1e27a33076,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233868382326380173, guid: eee46f99cedecd4449813b1e27a33076,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8233868382015080127, guid: eee46f99cedecd4449813b1e27a33076,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 965380235}
+      objectReference: {fileID: 938976699}
+    - target: {fileID: 8233868382015080127, guid: eee46f99cedecd4449813b1e27a33076,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233868382015080127, guid: eee46f99cedecd4449813b1e27a33076,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8233868382082312450, guid: eee46f99cedecd4449813b1e27a33076,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 965380235}
+      objectReference: {fileID: 938976699}
+    - target: {fileID: 8233868382082312450, guid: eee46f99cedecd4449813b1e27a33076,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCar
+      objectReference: {fileID: 0}
     - target: {fileID: 8233868381439339738, guid: eee46f99cedecd4449813b1e27a33076,
         type: 3}
       propertyPath: m_LocalPosition.x
